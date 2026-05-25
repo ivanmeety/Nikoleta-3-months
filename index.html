@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 месеца ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ░░░ PAGE 1 — LOGIN ░░░ -->
+  <section id="login-page" class="page active">
+    <div class="login-wrap">
+      <div class="login-badge">🔐</div>
+      <h1 class="login-title">Защитена зона</h1>
+      <p class="login-sub">Само истинската гадже може да влезе.<br>Докажи се.</p>
+
+      <div class="input-group">
+        <label>Кога започна всичко това? (ДД/ММ/ГГГГ)</label>
+        <input type="text" id="date-input" placeholder="не помниш ??? !!, ама ние днес го празнуваме.. :D " maxlength="10" autocomplete="off" />
+      </div>
+
+      <button class="btn-primary" onclick="checkLogin()">Влез ❤️</button>
+
+      <p id="error-msg" class="error-msg"></p>
+
+      <p class="login-hint">Подсказка: беше един много обикновен ден, който се оказа не толкова обикновен 🙂</p>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 2 — INTRO / WELCOME ░░░ -->
+  <section id="welcome-page" class="page">
+    <div class="welcome-wrap">
+      <p class="welcome-eyebrow">добре дошла,</p>
+      <h1 class="welcome-title">Мила <span class="italic">шофьорке</span> 🚗</h1>
+      <p class="welcome-body">
+        3 месеца. 90 дни. Безброй километри изминати с теб зад волана<br>
+        и мен — максимално отпуснат на пасажерската седалка.
+      </p>
+      <p class="welcome-body">
+        Направих ти това, защото думите понякога не стигат.<br>
+        Но снимките — да.
+      </p>
+      <button class="btn-primary" onclick="goTo('trips-page')">Нека започваме →</button>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 3 — TRIPS ░░░ -->
+  <section id="trips-page" class="page">
+    <div class="section-header">
+      <p class="eyebrow">глава първа</p>
+      <h2 class="section-title">Пътешествията ни 🗺️</h2>
+      <p class="section-sub">Навсякъде с теб е приключение. Дори до магазина.</p>
+    </div>
+
+    <div class="cards-feed">
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/trip1.jpg" alt="Пътуване 1" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">🌅</span>
+          <p>Първото ни пътуване заедно</p>
+        </div>
+      </div>
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/trip2.jpg" alt="Пътуване 2" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">🏔️</span>
+          <p>За пръв път на Доспат:*</p>
+        </div>
+      </div>
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/trip3.jpg" alt="Пътуване 3" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">🌊</span>
+          <p>Горчивоо :3 </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-nav">
+      <button class="btn-secondary" onclick="goTo('cooking-page')">Напред →</button>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 4 — COOKING ░░░ -->
+  <section id="cooking-page" class="page">
+    <div class="section-header">
+      <p class="eyebrow">глава втора</p>
+      <h2 class="section-title">Кухненски хаос 🍝</h2>
+      <p class="section-sub">Готвим заедно. Аз предимно ям. Честно казано.</p>
+    </div>
+
+    <div class="cards-feed">
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/cooking1.jpg" alt="Готвене 1" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">👨‍🍳</span>
+          <p>Мисия Паста ... Успешна</p>
+        </div>
+      </div>
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/cooking2.jpg" alt="Готвене 2" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">🥘</span>
+          <p>Ям и плача ;( ;(</p>
+        </div>
+      </div>
+
+      <div class="memory-card reveal-card">
+        <div class="card-img-wrap card-img-quote">
+          <div class="quote-block">
+            <span class="quote-big">"</span>
+            <p>Честно казано не знам как готвиш толкова добре. Магия е.</p>
+          </div>
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">💬</span>
+          <p>— аз, всеки път</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-nav">
+      <button class="btn-secondary" onclick="goTo('us-page')">Напред →</button>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 5 — US ░░░ -->
+  <section id="us-page" class="page">
+    <div class="section-header">
+      <p class="eyebrow">глава трета</p>
+      <h2 class="section-title">Просто ние ❤️</h2>
+      <p class="section-sub">Любимите ми снимки. Без обяснения.</p>
+    </div>
+
+    <div class="cards-feed">
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/us1.jpg" alt="Ние 1" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">🥹</span>
+          <p>Някой ден!!</p>
+        </div>
+      </div>
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/us2.jpg" alt="Ние 2" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">✨</span>
+          <p>Трябва да повторим и потретим и ....!</p>
+        </div>
+      </div>
+
+      <div class="memory-card">
+        <div class="card-img-wrap">
+          <img src="photos/us3.jpg" alt="Ние 3" onerror="this.parentElement.classList.add('no-img')" />
+        </div>
+        <div class="card-caption">
+          <span class="card-emoji">💛</span>
+          <p>Заобичах пътуването заради теб любов!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-nav">
+      <button class="btn-secondary" onclick="goTo('vouchers-page')">Напред →</button>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 6 — VOUCHERS ░░░ -->
+  <section id="vouchers-page" class="page">
+    <div class="section-header">
+      <p class="eyebrow">специална секция</p>
+      <h2 class="section-title">Ти беше най-добрата<br><span class="italic">Пасажерска Принцеса</span> 🚗👑</h2>
+      <p class="section-sub">
+        Да, возих се като лорд 3 месеца. Признавам.<br>
+        Но вече получавам книжка — и ти ставаш <strong>VIP пътник</strong>.<br>
+        Ето твоите ваучери.
+      </p>
+      <p class="vouchers-tap-hint">👇 Натисни ваучер, за да го отвориш</p>
+    </div>
+
+    <div class="vouchers-grid">
+
+      <div class="voucher" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">✈️</span>
+            <p class="voucher-name">Ваучер №1</p>
+            <p class="voucher-teaser">Изненада пътуване</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">🎉</span>
+            <p>Безплатно пътуване до <strong>избрана дестинация</strong> — ти избираш накъде, аз карам.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">🏢</span>
+            <p class="voucher-name">Ваучер №2</p>
+            <p class="voucher-teaser">Вземане от работа</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">🚘</span>
+            <p>1× безплатно вземане от работа с <strong>личен шофьор</strong> (т.е. мен). Без условия.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">🌙</span>
+            <p class="voucher-name">Ваучер №3</p>
+            <p class="voucher-teaser">Нощна разходка</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">🌟</span>
+            <p>Нощна разходка до <strong>твоето любимо място</strong> — по всяко време, в каквото настроение.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">🍕</span>
+            <p class="voucher-name">Ваучер №4</p>
+            <p class="voucher-teaser">Пица мисия</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">😍</span>
+            <p>Возя те до <strong>любимата ти пицария</strong> — без да се оплаквам от трафика. Дори веднъж.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">☀️</span>
+            <p class="voucher-name">Ваучер №5</p>
+            <p class="voucher-teaser">Ден само ние двамата</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">💛</span>
+            <p>Цял ден по <strong>твоя план</strong> — куд решиш, там отиваме. Тетрис с другото ти кола-такси.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voucher voucher-special" onclick="flipVoucher(this)">
+        <div class="voucher-inner">
+          <div class="voucher-front">
+            <span class="voucher-icon">👑</span>
+            <p class="voucher-name">Ваучер №6</p>
+            <p class="voucher-teaser">ЕКСКЛУЗИВЕН</p>
+          </div>
+          <div class="voucher-back">
+            <span class="voucher-icon">❤️</span>
+            <p>Карам те <strong>навсякъде, завинаги</strong>. Без изтичане на срока. Просто защото те обичам.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-nav">
+      <button class="btn-secondary" onclick="goTo('final-page')">Последна страница →</button>
+    </div>
+  </section>
+
+  <!-- ░░░ PAGE 7 — FINAL ░░░ -->
+  <section id="final-page" class="page">
+    <div class="final-wrap">
+      <div class="final-img-wrap">
+        <img src="photos/us1.jpg" alt="Ние" class="final-photo" onerror="this.style.display='none'" />
+        <div class="final-overlay"></div>
+      </div>
+
+      <div class="final-content">
+        <p class="final-eyebrow">3 месеца по-късно</p>
+        <h1 class="final-title">Благодаря ти ❤️</h1>
+        <p class="final-body">
+          За всяко карано, за всяко изчакване, за всяка песен пусната в колата.<br>
+          За търпението, усмивките и за това, че се появи.
+        </p>
+        <p class="final-body italic">
+          Очаквай версия 2.0 — вече с книжка. 🚗
+        </p>
+
+        <div class="hearts-row" id="hearts-row">
+          <span>❤️</span><span>🧡</span><span>💛</span><span>💚</span><span>💙</span><span>💜</span>
+        </div>
+
+        <!-- Optional music player -->
+        <div class="music-player" id="music-player">
+          <p class="music-label">🎵 Нашата песен</p>
+          <audio controls>
+            <source src="music/song.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
